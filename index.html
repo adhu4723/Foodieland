@@ -34,7 +34,7 @@
     <main class="space-y-7 lg:px-10 px-4">
         <section class="lg:px-8">
             <div class="flex justify-between bg-[#E7FAFE] w- mx-auto items-center flex-wrap rounded-4xl ">
-                <div class="space-y-4 lg:space-y-7 px-8 ">
+                <div class="space-y-4 lg:space-y-7 px-2 lg:px-8 ">
                     <div class="bg-white p-2 w-fit rounded-lg">
                         Hot Recipes
                     </div>
@@ -55,19 +55,21 @@
                         </div>
                     </div>
                     <div class="flex items-center justify-between flex-wrap gap-6">
-                    <div class="flex gap-2 items-center">
-                        <img class="rounded-full" width="50" src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY=" alt="">
-                        <div>
-                            <p>John Smith</p>
-                            <span>15 March 2025</span>
+                        <div class="flex gap-2 items-center">
+                            <img class="rounded-full" width="50"
+                                src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY="
+                                alt="">
+                            <div>
+                                <p>John Smith</p>
+                                <span>15 March 2025</span>
+                            </div>
                         </div>
+                        <button class="bg-black px-4 py-2 text-white rounded-2xl">View Receipy</button>
                     </div>
-                    <button class="bg-black px-4 py-2 text-white rounded-2xl">View Receipy</button>
-                </div>
                 </div>
                 <div class="">
                     <img width="500" class="rounded-4xl" src="./images/headerimg.png">
-                      
+
                 </div>
             </div>
 
@@ -76,15 +78,38 @@
         <section class="">
             <h1 class="text-4xl mb-10">Categories</h1>
             <div id="categorylist" class="categorylist flex gap-10 w-sm-screen overflow-auto">
-               <div class="flex flex-col justify-center text-center w-fit ">
-                <img src="https://png.pngtree.com/png-clipart/20220219/ourlarge/pngtree-triangle-rice-ball-png-image_4419912.png" alt="">
-                <p>Breakfast</p>
-               </div>
-             
+                <div class="flex flex-col justify-center text-center w-fit ">
+                    <img src="https://png.pngtree.com/png-clipart/20220219/ourlarge/pngtree-triangle-rice-ball-png-image_4419912.png"
+                        alt="">
+                    <p>Breakfast</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="text-center">
+            <h1 class="text-4xl font-extrabold">Simple and tasty recipes</h1>
+            <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut <br>labore et
+                dolore magna aliqut enim ad minim </p>
+            <div class="grid grid-cols-1 lg:grid-cols-4  gap-8" id="disheslist">
+                <div class="w- space-y-2 bg-[#E7F9FD] p-4">
+                    <img src="./images/Mask Group.png" alt="">
+                    <div></div>
+                    <h1 class="font-bold ">Big and Juicy Wagyu Beef Cheeseburger</h1>
+                    <div class="flex justify-center gap-10">
+                    <div class="flex gap-2 items-center">
+                        <i class="fa-solid fa-clock"></i>
+                        <p>30 min</p>
+                    </div>
+                    <div class="flex gap-2 items-center">
+                        <i class="fa-solid fa-utensils"></i>
+                        <p>30 min</p>
+                    </div>
+                </div>
+            </div>
             </div>
         </section>
     </main>
-   <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
