@@ -33,7 +33,7 @@ async function fetchDishes(params) {
             <div class="w- relative shadow-lg rounded-lg space-y-2 border  p-4">
                     <img class="rounded-lg shadow-lg" src=${items.strMealThumb} alt="">
                     <div class="absolute top-5 right-5 bg-white px-2 py-1 text-red-600 rounded-full"><i class="fa-solid fa-heart"></i></div>
-                    <h1 class="font-bold ">Big and Juicy Wagyu Beef Cheeseburger</h1>
+                    <h1 class="font-bold ">${items.strMeal}</h1>
                     <div class="flex justify-center gap-10">
                     <div class="flex gap-2 items-center">
                         <i class="fa-solid fa-clock"></i>
