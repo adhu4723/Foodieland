@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./styles/index.css">
-
+ 
     <title>FoodieLand</title>
 
 </head>
 
 <body>
     <header>
-        <nav class="flex justify-between text-lg border-b-1 border-gray-400 items-center px-8 py-6">
+        <nav class="flex justify-between text-lg border-b-1 border-gray-400 items-center px-8 py-6 mb-10">
             <h1 class="lobster-regular text-3xl">FoodieLand</h1>
             <div class="lg:flex gap-4 hidden">
                 <a href="">Home</a>
@@ -31,8 +32,16 @@
         </nav>
     </header>
 
-    <main class="space-y-7 lg:px-10 px-4">
+    <main class="space-y-20 lg:px-10 px-4">
         <section class="lg:px-8">
+            
+
+<div id="controls-carousel" class="relative w-full" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="relative h-[80vh] overflow-hidden rounded-lg ">
+         <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
             <div class="flex justify-between bg-[#E7FAFE] w- mx-auto items-center flex-wrap rounded-4xl ">
                 <div class="space-y-4 lg:space-y-7 px-2 lg:px-8 ">
                     <div class="bg-white p-2 w-fit rounded-lg">
@@ -60,7 +69,7 @@
                                 src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY="
                                 alt="">
                             <div>
-                                <p>John Smith</p>
+                                <p class="font-bold">John Smith</p>
                                 <span>15 March 2025</span>
                             </div>
                         </div>
@@ -72,6 +81,44 @@
 
                 </div>
             </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+            <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+        </div>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-black dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+            </svg>
+            <span class="sr-only text-black">Previous</span>
+        </span>
+    </button>
+    <button type="button" class=" absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class=" text-black inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-black dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+            </svg>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+            
 
         </section>
 
@@ -90,37 +137,80 @@
             <h1 class="text-4xl font-extrabold">Simple and tasty recipes</h1>
             <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut <br>labore et
                 dolore magna aliqut enim ad minim </p>
-            <div class="grid grid-cols-1 lg:grid-cols-3   gap-10" id="disheslist">
+            <div class="grid grid-cols-1 lg:grid-cols-4   gap-10" id="disheslist">
                 <div class="w- space-y-2 bg-[#E7F9FD] p-4">
                     <img src="./images/Mask Group.png" alt="">
                     <div></div>
                     <h1 class="font-bold ">Big and Juicy Wagyu Beef Cheeseburger</h1>
                     <div class="flex justify-center gap-10">
-                    <div class="flex gap-2 items-center">
-                        <i class="fa-solid fa-clock"></i>
-                        <p>30 min</p>
-                    </div>
-                    <div class="flex gap-2 items-center">
-                        <i class="fa-solid fa-utensils"></i>
-                        <p>30 min</p>
+                        <div class="flex gap-2 items-center">
+                            <i class="fa-solid fa-clock"></i>
+                            <p>30 min</p>
+                        </div>
+                        <div class="flex gap-2 items-center">
+                            <i class="fa-solid fa-utensils"></i>
+                            <p>30 min</p>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
         <section class="flex gap-20 items-center flex-wrap lg:flex-nowrap">
             <div class="space-y-8 ">
-                <h1 class="text-[48px] font-bold leading-tight">Everyone can be a 
+                <h1 class="text-[48px] font-bold leading-tight">Everyone can be a <br>
                     chef in their own kitchen</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
-                    <button class="bg-black rounded-lg text-white px-4 py-2">Learn more</button>
+                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore magna aliqut enim ad minim </p>
+                <button class="bg-black rounded-lg text-white px-4 py-2">Learn more</button>
             </div>
             <div>
                 <img src="./images/portrait-happy-male-chef-dressed-uniform 1.png" alt="">
             </div>
         </section>
+        <section class="space-y-4">
+            <div class="space-y-10">
+                <div class="text-center ">
+
+                    <h1 class="text-2xl lg:text-4xl font-bold">Check out @foodieland on Instagram</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore <br> magna aliqut enim ad minim </p>
+                </div>
+                <div id="instapost" class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+                    <div class="w-fit space-y-4">
+                        <div class="flex items-center gap-2">
+                            <img src="" alt="">
+                            <div class="bg-black px-3 py-1 rounded-full text-white w-fit">
+                                F
+                            </div>
+                            <div>
+                                <h1 class="font-bold">FoodieLand</h1>
+                                <p>Tokyo,Japan</p>
+                            </div>
+
+                        </div>
+                        <img src="./images/Rectangle.png" alt="">
+                        <div class="flex justify-between text-2xl ">
+                            <div class="flex gap-2 ">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                            <i class="fa-regular fa-bookmark"></i>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="w-fit mx-auto">
+                    <button class="bg-black text-white px-4 py-2 rounded  "><i class="fa-brands fa-instagram"></i> Visit our
+                        instagram</button>
+                </div>
+            </div>
+            
+        </section>
     </main>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 
 </html>
