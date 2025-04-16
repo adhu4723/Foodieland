@@ -179,7 +179,7 @@ if (currentPage.includes('reciepyDetails.html')) {
             const instructionsRaw = meal.strInstructions;
             const instructionsArray = instructionsRaw.split('.').filter(sentence => sentence.trim().length > 0);
 
-            const instructionsList = instructionsArray.map(step => `<li class="mb-2">✅ ${step}.</li>`).join('');
+            const instructionsList = instructionsArray.map(step => `<li class="mb-2">✅ ${step.trim()}.</li>`).join('');
             console.log(instructionsList);
             
             document.getElementById('instructions').innerHTML = `<ul type='none' class="">${instructionsList}</ul>`;
@@ -196,3 +196,30 @@ if (currentPage.includes('reciepyDetails.html')) {
 fetchinstaPost();
 fetchcategory();
 fetchDishes();
+
+
+
+    const printIcon = document.querySelector(".fa-print");
+    const modal = document.getElementById("printModal");
+    const closeModal = document.getElementById("closeModal");
+
+    printIcon.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
+
+    function handleprint(){
+        modal.classList.add("hidden");
+        window.print()
+    }
+   
+
+    // Optional: Close modal on outside click
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.add("hidden");
+        }
+    });

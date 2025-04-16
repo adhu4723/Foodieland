@@ -99,9 +99,30 @@
         <h1 class="text-4xl lobster-regular mb-5">Let's make it</h1>
         <p id="instructions">  </p>
     </div>
+    <hr>
  </main>
 
+<!-- Modal -->
+<div id="printModal" class="fixed inset-0 hidden ">
+    <!-- Overlay background -->
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+  
+    <!-- Modal content -->
+    <div class="relative z-10 flex justify-center items-center h-full">
+      <div class="bg-white p-8 rounded-lg shadow-lg w-[90%] max-w-md relative">
+        <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-black text-2xl">&times;</button>
+        <h2 class="text-2xl font-bold mb-4">Print this recipe?</h2>
+        <p class="mb-4">Click the button below to print the page.</p>
+        <button onclick="handleprint()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
+          Print Now
+        </button>
+      </div>
+    </div>
+  </div>
+
  <script src="./script.js"></script>
+ <script src="https://cdn.tailwindcss.com"></script>
+
     
 </body>
 </html>
