@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav class="flex justify-between text-lg border-b-1 border-gray-400 items-center px-8 py-6 mb-10">
-            <a href="./index.html" class="lobster-regular text-3xl">FoodieLand</a>
+            <a href="./index.html" class="lobster-regular  text-3xl">FoodieLand</a>
             <div class="lg:flex gap-4 hidden">
                 <a href="">Home</a>
                 <a href="">Recipes</a>
@@ -28,12 +28,12 @@
         </nav>
     </header>
  <main class="px-8">
-    <h1 id="dishhead" class="text-4xl font-bold mb-5">Health Japanese Fried Rice</h1>
+    <h1 id="dishhead" class="text-4xl lobster-regular   font-bold mb-5">Health Japanese Fried Rice</h1>
  
     <div class="flex items-center gap-5 flex-wrap justify-between mt-5 mb-5">
 
     
-    <div class="flex flex-wrap items-center  gap-4 ">
+    <div class="flex flex-wrap items-center  gap-4  ">
         <div class="flex gap-2  items-center">
             <img class="rounded-full" width="50"
                 src="https://media.istockphoto.com/id/1317804578/photo/one-businesswoman-headshot-smiling-at-the-camera.jpg?s=612x612&w=0&k=20&c=EqR2Lffp4tkIYzpqYh8aYIPRr-gmZliRHRxcQC5yylY="
@@ -81,10 +81,24 @@
         </div>
     </div>
 </div>
-<hr>
-<div id="mealDetails">
+<hr class="mb-10">
 
+<div id="dishdetails" class="grid grid-cols-1 lg:grid-cols-5 grid-rows-5 gap-5">
+    <div class="lg:col-span-3 row-span-5">
+        <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+    </div>
+    <div class="lg:col-span-2 space-y-4 row-span-5 lg:col-start-4 bg-[#E7FAFE] ">
+<h1 class="font-bold lobster-regular text-3xl text-center ">Incredients Required</h1>
+<hr>
+<h1>Salt</h1>
+<hr>
+    </div>
 </div>
+    <hr class="my-10">
+    <div>
+        <h1 class="text-4xl lobster-regular mb-5">Let's make it</h1>
+        <p id="instructions">  </p>
+    </div>
  </main>
 
  <script src="./script.js"></script>

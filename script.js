@@ -19,7 +19,7 @@ async function fetchcategory() {
             </a>
         `).join('');
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 }
 
@@ -112,8 +112,7 @@ if (currentPage.includes('categories.html')) {
                     <div class="absolute top-5 right-5 bg-white px-2 py-1 text-red-600 rounded-full">
                         <i class="fa-solid fa-heart"></i>
                     </div>
-                    <h1 class="font-bold">${item.strMeal}</h1>
-                    <div class="flex flex-wrap justify-between">
+                    <a href="reciepyDetails.html?id=${encodeURIComponent(item.idMeal)}" class="font-bold hover:underline">${item.strMeal}</a>                    <div class="flex flex-wrap justify-between">
                         <div class="flex gap-2 items-center">
                             <i class="fa-solid fa-clock"></i>
                             <p>30 min</p>
@@ -144,11 +143,47 @@ if (currentPage.includes('reciepyDetails.html')) {
             const data = await res.json();
             const meal = data.meals[0];
             console.log(meal);
-            
+            const youtubeUrl = meal.strYoutube; // e.g., "https://www.youtube.com/watch?v=bCr3GasJWwE";
+            const videoId = youtubeUrl.split("v=")[1]; // extract the ID
+            const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
 
             document.getElementById('dishhead').innerHTML = `
-                ${meal.strMeal}
+               ${meal.strMeal}
             `;
+            document.getElementById('dishdetails').innerHTML = `
+            <div class="lg:col-span-3 row-span-5">
+            <iframe class="w-full h-[550px]" width="560" height="315" src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="lg:col-span-2 space-y-4 row-span-5 lg:col-start-4 bg-[#E7FAFE] rounded-lg p-8">
+            <h1 class="font-bold lobster-regular text-3xl text-center ">Incredients Required</h1>
+            <hr >
+            <h1>${meal.strIngredient1}</h1>
+            <hr class="text-gray-300">
+            <h1>${meal.strIngredient2}</h1>
+            <hr class="text-gray-300">
+            <h1>${meal.strIngredient3}</h1>
+            <hr class="text-gray-300">
+            <h1>${meal.strIngredient4}</h1>
+            <hr class="text-gray-300">
+            <h1>${meal.strIngredient5}</h1>
+            <hr class="text-gray-300">
+            <h1>${meal.strIngredient6}</h1>
+            <hr class="text-gray-300">
+            <h1>${meal.strIngredient7}</h1>
+            <hr class="text-gray-300">
+            <h1>${meal.strIngredient8}</h1>
+            <hr class="text-gray-300">
+            </div>
+            `
+            const instructionsRaw = meal.strInstructions;
+            const instructionsArray = instructionsRaw.split('.').filter(sentence => sentence.trim().length > 0);
+
+            const instructionsList = instructionsArray.map(step => `<li class="mb-2">✅ ${step}.</li>`).join('');
+            console.log(instructionsList);
+            
+            document.getElementById('instructions').innerHTML = `<ul type='none' class="">${instructionsList}</ul>`;
+            
         } catch (error) {
             console.log(error);
         }
